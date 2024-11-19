@@ -1,21 +1,53 @@
-CREATE TABLE users (
-    userID INT PRIMARY KEY AUTO_INCREMENT,
-    firstName VARCHAR(50) NOT NULL,  -- Added firstName column
-    lastName VARCHAR(50) NOT NULL,   -- Added lastName column
-    username VARCHAR(50) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+INSERT INTO users (firstName, lastName, username, email, password) VALUES
+('John', 'Doe', 'johndoe', 'johndoe@example.com', 'password123'),
+('Jane', 'Smith', 'janesmith', 'janesmith@example.com', 'password456'),
+('Michael', 'Johnson', 'mjohnson', 'mjohnson@example.com', 'password789'),
+('Emily', 'Davis', 'edavis', 'edavis@example.com', 'password012'),
+('David', 'Martinez', 'dmartinez', 'dmartinez@example.com', 'password345'),
+('Sarah', 'Taylor', 'staylor', 'staylor@example.com', 'password678'),
+('Daniel', 'Anderson', 'danderson', 'danderson@example.com', 'password901'),
+('Sophia', 'Moore', 'smoore', 'smoore@example.com', 'password234'),
+('Matthew', 'Jackson', 'mjackson', 'mjackson@example.com', 'password567'),
+('Olivia', 'White', 'owhite', 'owhite@example.com', 'password890'),
+('William', 'Harris', 'wharris', 'wharris@example.com', 'password111'),
+('Isabella', 'Thompson', 'ithompson', 'ithompson@example.com', 'password222'),
+('Joseph', 'Garcia', 'jgarcia', 'jgarcia@example.com', 'password333'),
+('Mia', 'Martinez', 'mmartinez', 'mmartinez@example.com', 'password444'),
+('James', 'Robinson', 'jrobinson', 'jrobinson@example.com', 'password555'),
+('Amelia', 'Clark', 'aclark', 'aclark@example.com', 'password666'),
+('Alexander', 'Rodriguez', 'arodriguez', 'arodriguez@example.com', 'password777'),
+('Evelyn', 'Lewis', 'elewis', 'elewis@example.com', 'password888'),
+('Benjamin', 'Lee', 'blee', 'blee@example.com', 'password999'),
+('Charlotte', 'Walker', 'cwalker', 'cwalker@example.com', 'password000'),
+('Liam', 'Hall', 'lhall', 'lhall@example.com', 'password112'),
+('Ava', 'Young', 'ayoung', 'ayoung@example.com', 'password223'),
+('Henry', 'Allen', 'hallen', 'hallen@example.com', 'password334'),
+('Ella', 'King', 'eking', 'eking@example.com', 'password445'),
+('Lucas', 'Scott', 'lscott', 'lscott@example.com', 'password556');
 
-CREATE TABLE applications (
-    applicationID INT PRIMARY KEY AUTO_INCREMENT,
-    userID INT NOT NULL,
-    cause VARCHAR(100) NOT NULL,
-    skills TEXT,
-    experience TEXT,
-    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    firstName VARCHAR(50) NOT NULL,
-    lastName VARCHAR(50) NOT NULL;
-    FOREIGN KEY (userID) REFERENCES users(userID)
-);
+INSERT INTO applications (userID, cause, skills, experience, firstName, lastName) VALUES
+(1, 'Education for All', 'Teaching, Communication', '3 years teaching in a rural area', 'John', 'Doe'),
+(2, 'Animal Welfare', 'Veterinary, Animal Care', '2 years volunteering at animal shelters', 'Jane', 'Smith'),
+(3, 'Environmental Conservation', 'Project Management, Fundraising', '5 years managing environmental projects', 'Michael', 'Johnson'),
+(4, 'Healthcare Access', 'Nursing, First Aid', '4 years as a nurse in community health', 'Emily', 'Davis'),
+(5, 'Youth Empowerment', 'Mentoring, Leadership', '3 years as a youth counselor', 'David', 'Martinez'),
+(6, 'Women Empowerment', 'Public Speaking, Advocacy', '4 years working with women’s organizations', 'Sarah', 'Taylor'),
+(7, 'Disaster Relief', 'Logistics, Volunteer Coordination', '5 years organizing relief efforts', 'Daniel', 'Anderson'),
+(8, 'Homeless Support', 'Counseling, Food Distribution', '3 years as a social worker', 'Sophia', 'Moore'),
+(9, 'Technology for Good', 'Programming, Data Analysis', '5 years in software development for NGOs', 'Matthew', 'Jackson'),
+(10, 'Clean Water Access', 'Engineering, Problem-Solving', '4 years in water purification projects', 'Olivia', 'White'),
+(11, 'Mental Health Awareness', 'Psychology, Counseling', '6 years as a mental health counselor', 'William', 'Harris'),
+(12, 'Arts and Culture', 'Creative Writing, Public Relations', '3 years organizing community art events', 'Isabella', 'Thompson'),
+(13, 'Child Welfare', 'Childcare, Social Work', '4 years in child welfare services', 'Joseph', 'Garcia'),
+(14, 'Food Security', 'Agriculture, Nutrition', '5 years working on sustainable farming', 'Mia', 'Martinez'),
+(15, 'Elderly Care', 'Healthcare, Patient Care', '7 years as a geriatric nurse', 'James', 'Robinson'),
+(16, 'Economic Development', 'Economics, Microfinance', '4 years in economic development projects', 'Amelia', 'Clark'),
+(17, 'Legal Aid', 'Law, Mediation', '6 years providing legal aid for low-income families', 'Alexander', 'Rodriguez'),
+(18, 'Community Development', 'Urban Planning, Project Management', '5 years in community planning', 'Evelyn', 'Lewis'),
+(19, 'Anti-Human Trafficking', 'Investigation, Case Management', '4 years working with anti-trafficking units', 'Benjamin', 'Lee'),
+(20, 'Disability Rights', 'Advocacy, Accessibility Design', '3 years advocating for disability rights', 'Charlotte', 'Walker'),
+(21, 'Public Health', 'Epidemiology, Research', '5 years in public health research', 'Liam', 'Hall'),
+(22, 'Literacy Programs', 'Teaching, Curriculum Development', '4 years creating literacy programs', 'Ava', 'Young'),
+(23, 'Refugee Support', 'Translation, Casework', '3 years working with refugee communities', 'Henry', 'Allen'),
+(24, 'Climate Change', 'Environmental Science, Advocacy', '6 years in climate activism', 'Ella', 'King'),
+(25, 'Human Rights', 'Advocacy, Public Policy', '7 years in human rights advocacy', 'Lucas', 'Scott');
