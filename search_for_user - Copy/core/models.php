@@ -119,7 +119,6 @@ function getAllApplicants() {
 // search for applicants 
 function searchApplicants($searchTerm) {
     global $pdo;
-
     try {
         $stmt = $pdo->prepare("
             SELECT 
@@ -144,7 +143,5 @@ function searchApplicants($searchTerm) {
     } catch (Exception $e) {
         return []; 
 }
-
-
-
+}
 ?>
